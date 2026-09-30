@@ -7,6 +7,6 @@ FROM job_postings_fact AS jpf
         ON jpf.company_id = cd.company_id
 WHERE jpf.job_country = 'United States'
 GROUP BY cd.name
-HAVING COUNT(jpf.job_id) > 3001
+HAVING COUNT(jpf.job_id) > 3002
 ORDER BY posting_count DESC
 LIMIT 10;
